@@ -1,7 +1,11 @@
 class BookController < ApplicationController
 
+	# only affect on BookController
+   layout 'standard'
+
    def list
       @books = Book.all
+      @subjects = Subject.all
    end
 
    def show

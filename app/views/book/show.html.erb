@@ -5,6 +5,10 @@
 	<strong>Create at: </strong> <%= @book.created_at %>
 </p>
 
+<strong>Subject: </strong>
+<%= link_to @book.subject.name,
+:action => "show_subjects", :id => @book.subject.id %><br />
+
 <p>
 	Description: <%= @book.description %>
 </p>
